@@ -4,7 +4,7 @@ var path = require('path');
 
 function createApplicationClass(context) {
     var configXml = path.join(context.opts.projectRoot, 'config.xml');
-    var parser = context.requireCordovaModule('elementtree');
+    var parser = require('elementtree');
 
     var configData = fs.readFileSync(configXml).toString();
     var configs = parser.parse(configData);
