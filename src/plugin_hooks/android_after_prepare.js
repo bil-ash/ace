@@ -32,7 +32,7 @@ function createApplicationClass(context) {
         fs.writeFileSync(androidApplicationClassDstPath, data);
     }
 
-    var manifestXml = path.join(context.opts.projectRoot, "platforms/android/AndroidManifest.xml");
+    var manifestXml = path.join(context.opts.projectRoot, "platforms/android/app/src/main/AndroidManifest.xml");
     var manifestData = fs.readFileSync(manifestXml).toString();
     var manifest = parser.parse(manifestData);
 
